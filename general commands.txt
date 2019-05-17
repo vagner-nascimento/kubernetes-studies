@@ -12,7 +12,7 @@ $ kubectl describe service <service_name> # Brings details about some service
 # Gives access to a port inside the pod to listen in a local port. Used just for us, admins, to access our Pods from local machine
 $ kubectl portfoward <pod_name> <local_port_toListen>:<pod_port>
 
-# Expose pod as a Kubernetes Service to outside. Typenode is the type of service. If don't define a name, it takes the name of the pod
+# Expose pod as a Kubernetes Service to outside (create a service). Typenode is the type of service. If don't define a name, it takes the name of the pod
 $ kubectl expose pod <pod_name> --type=NodePort --name <service-name>
 
 # Starts a little pod to test somethings (like if a new service is available to the cluster) on your cluster

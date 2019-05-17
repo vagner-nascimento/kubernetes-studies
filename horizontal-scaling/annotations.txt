@@ -1,0 +1,1 @@
+IMPORTANT: You can do horizontal scale only for statless applications

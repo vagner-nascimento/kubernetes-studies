@@ -1,0 +1,4 @@
+Kubernetes Architeture:
+- Each nod has a 'kubelet' and a 'kube-proxy' service running.
+    * kubelet - responsable to lauch the pods, communicate with master node to get this information
+    * kube-proxy - feeds the information about pods on this node to iptables

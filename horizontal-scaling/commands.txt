@@ -1,0 +1,5 @@
+# Set a new size for a Deployment, ReplicaSet, Replication Controller, or StatefulSet.
+$ kubectl scale --replicas=<number of desired replicas> -f <path to yml file>
+$ kubectl scale --replicas=2 rc/<recplica controller name>
+
+$ kubectl get rc # Get all replacation controllers

@@ -26,3 +26,4 @@ $ kubectl logs <pod_name> # Show the logs of the Pod
 
 >> MINIKUBE
 $ minikube service <service-name> --url # Get the URL of exposed service by name
+$ minikube service list # Get a list of all available services

@@ -1,0 +1,2 @@
+# Node Labels commands:
+$ kubectl label nodes <node_name> <label_key>=<label_value> # Add labels to the node. Ex.: kubectl label nodes minikube hardware=high-spec

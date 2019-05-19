@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+spec:
+  replicas: 3
+  revisionHistoryLimit: 100
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: k8s-demo
+        image: vagnernasc88/docker-demo-k8s
+        ports:
+        - name: nodejs-port
+          containerPort: 3000
+      nodeSelector:
+        hardware: high-spec

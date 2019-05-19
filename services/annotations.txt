@@ -1,0 +1,4 @@
+- By default services can only run between ports 30000 and 32767, 
+    but could be changed by adding '--service-node-port-range=<new_range>' argument 
+    to the kube-apiserver on the init scripts of cluster's master node.
+

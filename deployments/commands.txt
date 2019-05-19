@@ -1,0 +1,10 @@
+$ kubectl get deployments #Get information on current deployment
+$ kubectl rollout status deployment/<deployment_name> #Get deployment status/rollout
+$ kubectl rollout history deployment/<deployment_name> #Get history of deployed versions
+$ kubectl rollout undo deployment/<deployment_name> #Rollback to previous deployment version
+$ kubectl rollout undo deployment/<deployment_name> --to-revision=<revision> #Rollback to a specific deploy revision
+$ kubectl edit deployment/<deployment_name> #Edit the deployment object
+
+# Run container 'k8s-demo' with his image tag version 2. If version was not especified, it takes the latest version
+# Ex.: kubectl set image deployment/helloworld-deployment k8s-demo=vagnernasc88/docker-demo-k8s:2
+$ kubectl set image deployment/<deployment_name> <container_name>=<full_container_image>:<container_version>

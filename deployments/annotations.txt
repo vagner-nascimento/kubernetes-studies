@@ -1,0 +1,3 @@
+- When we creates a Deployment, it already creates the Replica Set for us.
+- To show 'CHANGE-CAUSE' when list a Deployment history with rollout history command, we must to use '--record' on it's ceation command
+    * Ex: kubectl create -f deployment/<file_of_deployment.yml> --record

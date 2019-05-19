@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+spec:
+  replicas: 3
+  revisionHistoryLimit: 100 #It set the limit of revisions on history stored on Kubernetes (it is useful to return to other versions). If not informmed, it will be '2147483647'.
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: k8s-demo
+        image: vagnernasc88/docker-demo-k8s
+        ports:
+        - name: nodejs-port
+          containerPort: 3000

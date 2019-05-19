@@ -1,6 +1,8 @@
 >> KUBECTL
-$ kubectl get pod # Get all pods in your Kubernetes cluster
+$ kubectl get pod # or 'get pods' #Get all pods in your Kubernetes cluster
+$ kubectl get pods --show-labels # Get all pods in your
 $ kubectl get service # Get all services on the Kubernetes cluster
+$ kubectl get rs # Get information about the replicaset
 $ kubectl create -f <file_name.yml> # Creates and starts a new pod/service on the cluster
 $ kubectl describe pod <pod_name> # Brings details about some pod
 $ kubectl describe service <service_name> # Brings details about some service

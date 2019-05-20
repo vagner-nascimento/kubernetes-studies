@@ -31,4 +31,7 @@ $ minikube service list # Get a list of all available services
 
 >> GENERAL TIPS
 - Use 'watch -n1 kubectl get pods' to watch the pods creation when create a resource like bellow:
+    Ex.:
     * kubectl create -f health-checks/deployment-healthcheck.yml && watch -n1 kubectl get pods
+
+$ watch -n1 kubectl get pods #Keep watching what happen with the Pods

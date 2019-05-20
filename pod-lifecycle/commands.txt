@@ -1,0 +1,6 @@
+# To see the Pod Lifecycle running the watch command in a separete terminal
+$ watch -n1 kubectl get pods #To keep watching what happen with the Pods
+
+#After runs create command through the 'deployment-lifecycle.yml' file 
+#   and the first Pod get started, get his name and run kubectl exec command to watch
+$ kubectl exec -it <pod_name> -- tail /timing -f

@@ -6,6 +6,7 @@ $ kubectl get rs # Get information about the replicaset
 $ kubectl create -f <file_name.yml> # Creates and starts a new pod/service on the cluster
 $ kubectl describe pod <pod_name> # Brings details about some pod
 $ kubectl describe service <service_name> # Brings details about some service
+$ kubectl edit <resource_type>/<resource_name> # edit some resource. e.g. kubectl edit deployment/my-deployment
 
 ***IMPORTANT about Service Descriptions***:
     - "NodePort" could be used for access from others containers on the same pod.

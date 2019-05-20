@@ -23,6 +23,7 @@ $ kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
 
 $ kubectl attach <pod_name> # Attach to a process that is already running inside an existing container.
 $ kubectl exec <pod_name> -- <command> # Run a command in a container. IMPORTANT: created files and configurations made by this command will DISAPPEARS when the container stop
+$ kubectl exec -it <pod_name> -- /bin/bash # Run a shell prompt into the Pod
 $ kubectl logs <pod_name> # Show the logs of the Pod
 
 >> MINIKUBE

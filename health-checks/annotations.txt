@@ -1,7 +1,3 @@
-- On the pod description, on the Containers session, has a line that describes the Health Check, like bellow:
-    * Liveness:       http-get http://:nodejs-port/ delay=15s timeout=30s period=10s #success=1 #failure=3
-    * where 'delay' is the delay of first check, 
-            'timeout' is the time of tries before define as unhealthy,
-            'period' is the time between checks,
-            'success' is the number of tries before define as healthy and
-            'failure' is the number of tries before define as unhealthy
+- IMPORTANT: The main diference between Liveness and Readness checks:
+    * Liveness gives 'ready' after the pod status is 'running'
+    * Readness gives 'ready' after the pod start is 'running' and is responding the requests as well

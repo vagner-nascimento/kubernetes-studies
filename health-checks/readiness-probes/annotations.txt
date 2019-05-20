@@ -1,0 +1,1 @@
+- IMPORTANT: If the Readness cehck fails, the pod's IP were removed from the Services and resquest will no more redirect to this pod until this check retuns success again.

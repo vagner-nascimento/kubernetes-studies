@@ -2,3 +2,4 @@
     but could be changed by adding '--service-node-port-range=<new_range>' argument 
     to the kube-apiserver on the init scripts of cluster's master node.
 
+- svc is a short describe for services, so you can use on commands like this: kubectl get svc

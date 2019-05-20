@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: helloworld
+    spec:
+      containers:
+      - name: k8s-demo
+        image: vagnernasc88/docker-demo-k8s
+        ports:
+        - name: nodejs-port
+          containerPort: 3000
+        livenessProbe: #It defines a Health Check
+          httpGet: #Use http get mode
+            path: / #Path to call HC (in prod we usually use something like '/health')
+            port: nodejs-port #It could be either port name or number
+            #scheme: HTTP #Type of call, optional, default (in this case) is HTTP
+          initialDelaySeconds: 15
+          timeoutSeconds: 30
+          #failureThreshold: 3 #Number of tries before define as unhealthy, optional, default is 3
+          #periodSeconds: 10 #Time between checks, optional, default is 10
+          #successThreshold: 1 #Number of tries before define as healthy, optional, default is 1

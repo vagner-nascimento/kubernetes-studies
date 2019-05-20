@@ -1,0 +1,11 @@
+#It brings an area called Conditions, which contains the conditions thath the pod has passed
+#Example bellow: 
+#Conditions:
+#  Type              Status
+#
+#  Initialized       True 
+#  Ready             True 
+#  ContainersReady   True 
+#  PodScheduled      True 
+#  Unschedulable     False
+$ kubectl describe pod <pod_name> -n kube-system

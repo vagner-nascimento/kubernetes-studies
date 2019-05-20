@@ -1,0 +1,1 @@
+- IMPORTANT: The container state can be Running, Terminated or Waiting

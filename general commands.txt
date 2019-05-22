@@ -41,3 +41,7 @@ $ minikube dashboard --url # Get the WEB UI of Kubernetes
 
 $ watch -n1 kubectl get pods #Keep watching what happen with the Pods
 $ kubectl exec <mysql_podname> -it -- mysql -u <user(default root)> -p #Access the mysql console. Password will be requested
+
+# Make a resquest to the cluster simullation a host name - Useful for test on minikube
+# ex.: curl 192.168.99.100 -H 'Host: helloworld-v1.example.com'
+$ curl <cluster_ip> -H 'Host: <host_congigured_on_ingress>'

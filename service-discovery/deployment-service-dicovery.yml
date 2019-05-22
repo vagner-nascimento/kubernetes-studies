@@ -1,0 +1,37 @@
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: helloworld-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: helloworld-db
+    spec:
+      containers:
+      - name: k8s-demo
+        image: wardviaene/k8s-demo
+        command: ["node", "index-db.js"] # This command overrides the Dockerfile command
+        ports:
+        - name: nodejs-port
+          containerPort: 3000
+        env:
+          - name: MYSQL_HOST
+            # The 'database-service' service is in another diferent POD
+            # You can call it from his service's name because de Service Descovery find it in the cluster
+            # through DNS
+            value: database-service # This is the Service's name that expose the database pod
+          - name: MYSQL_USER
+            value: root
+          - name: MYSQL_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: helloworld-secrets
+                key: rootPassword
+          - name: MYSQL_DATABASE
+            valueFrom:
+              secretKeyRef:
+                name: helloworld-secrets
+                key: database

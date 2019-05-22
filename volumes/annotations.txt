@@ -1,0 +1,3 @@
+To run the example bellow you'll need an AWS account configured to the Kubectl(KOPS)
+    - Udemy lesson: https://www.udemy.com/learn-devops-the-complete-kubernetes-course/learn/lecture/6097698#overview
+    - GitHub files: https://github.com/wardviaene/kubernetes-course/tree/master/volumes

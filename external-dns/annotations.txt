@@ -1,0 +1,3 @@
+To run the example bellow you'll need an AWS account configured to the Kubectl
+    - Link to the Udemy lesson: https://www.udemy.com/learn-devops-the-complete-kubernetes-course/learn/lecture/11335228#overview
+    - Link to the GitHub files: https://github.com/wardviaene/kubernetes-course/tree/master/external-dns

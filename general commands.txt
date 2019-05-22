@@ -37,3 +37,4 @@ $ minikube dashboard --url # Get the WEB UI of Kubernetes
     * kubectl create -f health-checks/deployment-healthcheck.yml && watch -n1 kubectl get pods
 
 $ watch -n1 kubectl get pods #Keep watching what happen with the Pods
+$ kubectl exec <mysql_podname> -it -- mysql -u <user(default root)> -p #Access the mysql console. Password will be requested

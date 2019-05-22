@@ -1,16 +1,21 @@
 >> KUBECTL
+# GETS:
 $ kubectl get pod # or 'get pods' #Get all pods in your Kubernetes cluster
 $ kubectl get pods --show-labels # Get all pods in your
 $ kubectl get service # Get all services on the Kubernetes cluster
 $ kubectl get rs # Get information about the replicaset
-$ kubectl create -f <file_name.yml> # Creates and starts a new pod/service on the cluster
+$ kubectl get <resource_type> <resource_name> -o yaml # Shows the yaml file of the resource.
+
+#DESCRIBES
 $ kubectl describe pod <pod_name> # Brings details about some pod
 $ kubectl describe service <service_name> # Brings details about some service
-$ kubectl edit <resource_type>/<resource_name> # edit some resource. e.g. kubectl edit deployment/my-deployment
 
-***IMPORTANT about Service Descriptions***:
-    - "NodePort" could be used for access from others containers on the same pod.
-    - "Endpoints" could be used to connect by another pods on the cluster.
+#EXECS
+$ kubectl exec <pod_name> -- <command> # Run a command in a container. IMPORTANT: created files and configurations made by this command will DISAPPEARS when the container stop
+$ kubectl exec -it <pod_name> -- /bin/bash # Run a shell prompt into the Pod
+
+$ kubectl create -f <file_name.yml> # Creates and starts a new pod/service on the cluster
+$ kubectl edit <resource_type>/<resource_name> # edit some resource. e.g. kubectl edit deployment/my-deployment
 
 # Gives access to a port inside the pod to listen in a local port. Used just for us, admins, to access our Pods from local machine
 $ kubectl portfoward <pod_name> <local_port_toListen>:<pod_port>
@@ -22,8 +27,6 @@ $ kubectl expose pod <pod_name> --type=NodePort --name <service-name>
 $ kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
 
 $ kubectl attach <pod_name> # Attach to a process that is already running inside an existing container.
-$ kubectl exec <pod_name> -- <command> # Run a command in a container. IMPORTANT: created files and configurations made by this command will DISAPPEARS when the container stop
-$ kubectl exec -it <pod_name> -- /bin/bash # Run a shell prompt into the Pod
 $ kubectl logs <pod_name> # Show the logs of the Pod
 
 >> MINIKUBE

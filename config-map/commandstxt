@@ -1,0 +1,2 @@
+# Creates a configmap from a file
+$ kubectl create configmap <configmap_name> --from-file=<config_file>

@@ -30,6 +30,7 @@ $ kubectl attach <pod_name> # Attach to a process that is already running inside
 $ kubectl logs <pod_name> # Show the logs of the Pod
 
 >> MINIKUBE
+$ minikube ip # Display minikube's cluster ip
 $ minikube service <service-name> --url # Get the URL of exposed service by name
 $ minikube service list # Get a list of all available services
 $ minikube dashboard --url # Get the WEB UI of Kubernetes
